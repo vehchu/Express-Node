@@ -59,7 +59,7 @@ app.post('/login', (req, res)=>{
   }
 })
 
-//Middle wear
+//Middleware
 const authenticateToken=(req, res, next)=>{
   const authHeader = req.headers["authorization"]
   var token = null
@@ -86,8 +86,7 @@ const authenticateToken=(req, res, next)=>{
   }
   // BEARER TOKEN
 }
-//end of middle wear
-
+//end of middlware
 
 app.get('/person',authenticateToken, (req, res) => {
   //res.send(list)
